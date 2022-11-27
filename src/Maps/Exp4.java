@@ -18,7 +18,7 @@ allSwap(["ax", "bx", "ay", "by", "ai", "aj", "bx", "by"]) → ["ay", "by", "ax",
          */
         String[] swap={"ax", "bx", "cx", "cy", "by", "ay", "aaa", "azz"} ;
 
-        String[] result=new String[swap.length];
+        String[] result=new String[swap.length];//yeni bir array olusturdum ki son halini bu array ile yazdıriyim.
         Map<Character, Integer> map = new HashMap<>();//ilk karakter ve o karakterlerin indexlerinden map yaptım.
         for (int i = 0; i < swap.length; i++) {
             char firstchar  = swap[i].charAt(0);//ilk karakterleri aldım
@@ -26,9 +26,11 @@ allSwap(["ax", "bx", "ay", "by", "ai", "aj", "bx", "by"]) → ["ay", "by", "ax",
             if (map.containsKey(firstchar)) {
                 int p=map.get(firstchar);
 
-                map.remove(firstchar);
+                map.remove(firstchar);//mapten char kaldırıldı ki tekrar bu blog'a girmesin ve yer değişikliği
+                //olmasın çünkü soruda "When a position in the array has been swapped,
+                // it no longer matches anything" demiş.
 
-                result[i]=result[p];
+                result[i]=result[p];//yer değişikliği yapıldı
                 result[p]=swap[i];
             } else {
                 result[i]=swap[i];
