@@ -5,12 +5,6 @@ import java.util.Map;
 
 public class Product {
     /*
- Hocam benim dedigim su sekilde : Urunler diye ayri bir class acin icine field olarak urunAdi ve fiyat olusturun.
- Sonra bu fieldlari kullanarak parametreli constructor olusturun. Bu constructor sayesinde
- ornegin 5 adet urun olusturun ve uretilen objeleri Map'e atin.
- Daha sonra bu map'i kullaniciya urun listesini gosterirken kullanabilirsiniz.
- Ikincisi fiyat hesaplama konularini method'a baglarsaniz bir kez yazarsiniz her yerde kullanirsiniz
-
   * Basit bir manav alisveris programi yaziniz.
      *
      * 1. Adim : urun listesinden urun sectir ve kac kilo oldugunu sor.
