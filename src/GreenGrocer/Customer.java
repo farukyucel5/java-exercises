@@ -27,7 +27,7 @@ public class Customer {
 
             double sum=the_total_cost(selection,kilo);
 
-            System.out.println("Would you like to take something else");
+            System.out.println("Would you like to take something else? yes or no");
             String respond=scan.next();
 
             if (respond.equals("no")) {
