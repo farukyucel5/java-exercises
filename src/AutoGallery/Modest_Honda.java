@@ -5,7 +5,20 @@ public class Modest_Honda extends Car implements InteriorParts,ExteriorParts {
     protected String make;
     protected String model;
     protected int year;
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
     protected double price=InteriorParts.price1+ExteriorParts.price1;
+
+    public Modest_Honda() {
+
+    }
+
+    public double getPrice() {
+        return price;
+    }
 
     @Override
     public String toString() {

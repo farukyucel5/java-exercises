@@ -1,23 +1,29 @@
 package AutoGallery;
 
-public class High_Quality_Honda extends Car implements InteriorParts ,ExteriorParts{
+public class High_Quality_Honda extends Modest_Honda{
     protected String make;
     protected String model;
     protected int year;
+    protected double sunroof_price=1000;
+    private final double price_of_quality_difference=5000;
 
-    @Override
-    public String toString() {
-        return "High_Quality_Honda{" +
-                "make='" + make + '\'' +
-                ", model='" + model + '\'' +
-                ", year=" + year +
-                '}';
-    }
+    protected double price=InteriorParts.price1+ExteriorParts.price1+price_of_quality_difference+sunroof_price;
+
+
+
+
+
+
 
     High_Quality_Honda(String make, String model, int year){
+        super();
         this.make=make;
         this.model=model;
         this.year=year;
+    }
+
+    public High_Quality_Honda() {
+
     }
 
     @Override
@@ -35,24 +41,7 @@ public class High_Quality_Honda extends Car implements InteriorParts ,ExteriorPa
         return year;
     }
 
-    @Override
-    public void steeringWheel() {
-        System.out.println("Autonomous steering wheels");
-    }
-
-    @Override
-    public void seats() {
-        System.out.println("More conformable seats");
-    }
-
-    @Override
-    public void airConditioner() {
-        System.out.println("High tech air conditioner");
-
-    }
-
-    @Override
-    public void carDoors() {
-        System.out.println("They have an aerodynamic design");
+    public double getPrice() {
+        return price;
     }
 }
